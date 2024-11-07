@@ -231,7 +231,7 @@ apt-get update && apt-get install nano
 nano conf/mtw-dist.ini
 ```
 
-Update the values `TARGET_YEAR`, `PREV_YEAR_DEF`, `PREV_YEARS` according ro your configuration.
+Update the values `TARGET_YEAR`, `PREV_YEAR_DEF`, `PREV_YEARS` according to your configuration.
 
 Save and exit: `CTRL+S`, `CTRL+X`
 
