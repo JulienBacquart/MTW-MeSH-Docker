@@ -101,8 +101,8 @@ You can for example use the [Jena Docker image](https://github.com/stain/jena-do
 
 ```bash
 docker run --rm \
---volume /$(pwd)/mesh-data/:/rdf \
-stain/jena riot --validate mesh.nt.gz mesh-trx_YYYY-MM-DD.nt.gz
+    --volume /$(pwd)/mesh-data/:/rdf \
+    stain/jena riot --validate mesh.nt.gz mesh-trx_YYYY-MM-DD.nt.gz
 ```
 
 A special service called `staging` is part of the Compose file to load the MeSH data into the triple store.  
@@ -175,17 +175,17 @@ If the `mesh_YYYY-MM-DD_....nt.gz` and  `mesh.nt.gz` files are stored in our loc
 
 ```bash
 docker run --rm \
---volume /$(pwd)/mesh-data/:/rdf stain/jena \
-riot --validate mesh.nt.gz mesh_YYYY-MM-DD_....nt.gz
+    --volume /$(pwd)/mesh-data/:/rdf stain/jena \
+    riot --validate mesh.nt.gz mesh_YYYY-MM-DD_....nt.gz
 ```
 
 ### Extract the translation from the backup using mesh-nt2trx tool
 
 ```bash
 docker run -it --rm \
---volume /$(pwd)/mesh-data/:/rdf \
---workdir //rdf mtw-server \
-python3 //app/tools/mesh-nt2trx.py mesh_YYYY-MM-DD_....nt.gz
+    --volume /$(pwd)/mesh-data/:/rdf \
+    --workdir //rdf mtw-server \
+    python3 //app/tools/mesh-nt2trx.py mesh_YYYY-MM-DD_....nt.gz
 ```
 
 You should now have a translation file `mtw-trx_YYYY-MM-DD.nt.gz` in your local `mesh-data` folder.
@@ -218,9 +218,9 @@ Follow the steps in [Loading the MeSH datasets](#loading-the-mesh-datasets)
 
 ```bash
 docker run -it --rm \
---volume mtw_mtw-data:/app/instance/ \
---workdir //app/instance/ \
-mtw-server bash
+    --volume mtw_mtw-data:/app/instance/ \
+    --workdir //app/instance/ \
+    mtw-server bash
 ```
 
 ```bash
