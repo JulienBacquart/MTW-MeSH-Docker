@@ -71,4 +71,4 @@ EXPOSE 55930
 
 # Run worker & server apps
 # TODO: stop listening on all interfaces via 0.0.0.0
-CMD python mtw-server.py --host 0.0.0.0 & python mtw-worker.py 
+CMD python mtw-server.py --host 0.0.0.0 & python mtw-worker.py
